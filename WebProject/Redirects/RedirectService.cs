@@ -18,14 +18,12 @@ namespace WebProject.Redirects
     public class RedirectService
     {
         private readonly IUrlResolver _urlResolver;
-        private readonly IContentRepository _contentRepository;
         private readonly ISiteDefinitionRepository _siteDefinitionRepository;
         private readonly IPublishedStateAssessor _publishedStateAssessor;
 
-        public RedirectService(IUrlResolver urlResolver, IContentRepository contentRepository, ISiteDefinitionRepository siteDefinitionRepository, IPublishedStateAssessor publishedStateAssessor)
+        public RedirectService(IUrlResolver urlResolver, ISiteDefinitionRepository siteDefinitionRepository, IPublishedStateAssessor publishedStateAssessor)
         {
             _urlResolver = urlResolver;
-            _contentRepository = contentRepository;
             _siteDefinitionRepository = siteDefinitionRepository;
             _publishedStateAssessor = publishedStateAssessor;
             RedirectRuleStorage.Init();
@@ -35,7 +33,6 @@ namespace WebProject.Redirects
         public RedirectService()
         {
             _urlResolver = ServiceLocator.Current.GetInstance<IUrlResolver>();
-            _contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
             _siteDefinitionRepository = ServiceLocator.Current.GetInstance<ISiteDefinitionRepository>();
             _publishedStateAssessor = ServiceLocator.Current.GetInstance<IPublishedStateAssessor>();
             RedirectRuleStorage.Init();
@@ -301,7 +298,7 @@ namespace WebProject.Redirects
 
         public string ResolveToUrl(RedirectRule theMatch, bool relativeToHost = true)
         {
-            string toUrl =  (theMatch.ToContentId > 0) 
+            string toUrl = (theMatch.ToContentId > 0)
                             ? _urlResolver.GetUrl(new ContentReference(theMatch.ToContentId), theMatch.ToContentLang)
                             : theMatch.ToUrl;
             if (relativeToHost)
