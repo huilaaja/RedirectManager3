@@ -10,7 +10,7 @@
 <h2>Version 3.0 improvements</h2>
 <p>Preview:</p>
 <p><img src="https://raw.githubusercontent.com/huilaaja/RedirectManager3/master/images/redirect-manager3-1.png" /></p>
-<p><i>Yes, it could be much prettier but it does the job ;)</i></p>
+<p><i>Yes, it could be much prettier, but it does the job ;)</i></p>
 
 <h2>NEW Features</h2>
 <ul>
@@ -61,8 +61,8 @@
 	</li>
 	<li>Security improvements
 		<ul>
-			<li>All the requests data goes by POST method body and not by GET methods.</li>
-			<li>Web.config based access right limitation is switch to Controller based limitations.</li>
+			<li>All the requests' data goes by POST method body and not by GET methods.</li>
+			<li>Config-based access right limitation is switch to Controller-based limitations.</li>
 		</ul>
 	</li>
 	<li>Improved multi-site support.
@@ -70,11 +70,11 @@
 			<li>Any host (*) rules are visible even if host filter is selected.<br/>
 			<img src="https://raw.githubusercontent.com/huilaaja/RedirectManager3/master/images/redirect-manager3-5.png" width="500" /></li>
 			<li>Default host filter is your current site host.</li>
-			<li>Editors can add hosts which doesn't even exists in Optimizely host settings. This is practical when you are moving existing site to Optimizely but haven't set up the hosts and DNS-addresses yet.<br/>
+			<li>Editors can add hosts which does not even need to exist in Optimizely host settings. This is practical when you are moving existing site to Optimizely but haven't set up the hosts and DNS-addresses yet.<br/>
 			<img src="https://raw.githubusercontent.com/huilaaja/RedirectManager3/master/images/redirect-manager3-7.png" width="500" /></li>
 		</ul>
 	</li>
-	<li>Migration path from version 2 to verion 3.<br/>
+	<li>Migration path from version 2 to version 3.<br/>
 		<img src="https://raw.githubusercontent.com/huilaaja/RedirectManager3/master/images/redirect-manager3-17.png" width="500" />
 	</li>
 </ul>
@@ -86,7 +86,7 @@
 	<li>Easily create redirects to any URLs or to Episerver pages.</li>
 	<li>Wild card rules.</li>
 	<li>Reordering and prioritizing rules.</li>
-	<li>And the most important: It's open Source and it's yours to extend and manipulate! <a href="https://github.com/solita" target="_blank">Solita &lt;3 Open Source!</a></li>
+	<li>And the most important: It's open-source and it's yours to extend and manipulate! <a href="https://github.com/solita" target="_blank">Solita &lt;3 open-source!</a></li>
 </ul>
 
 <h2>Minimum Requirements</h2>
