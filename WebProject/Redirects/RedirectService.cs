@@ -303,7 +303,7 @@ namespace WebProject.Redirects
                             : theMatch.ToUrl;
             if (relativeToHost)
             {
-                return toUrl.Replace("https://" + theMatch.Host, "")
+                return toUrl?.Replace("https://" + theMatch.Host, "")
                             .Replace("http://" + theMatch.Host, "");
             }
             return toUrl;
